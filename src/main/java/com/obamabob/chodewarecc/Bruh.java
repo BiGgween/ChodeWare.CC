@@ -6,14 +6,11 @@ import me.zero.alpine.EventBus;
 import me.zero.alpine.EventManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.lwjgl.opengl.Display;
 
-import java.awt.*;
-
-@Mod(modid = "chodewarecc", name = "ChodeWare.CC", version = "b1", clientSideOnly = true)
+@Mod(modid = Bruh.MODID, name = "ChodeWare.CC", version = "b1")
 public class Bruh {
+    public static final String MODID = "chodewarecc";
+
     public CapeUtils capeUtils;
     public NameUtils nameUtils;
 
