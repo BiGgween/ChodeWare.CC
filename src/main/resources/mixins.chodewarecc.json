@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.obamabob.chodewarecc.mixin.mixins",
+  "refmap": "mixins.chodewarecc.refmap.json",
+  "mixins": [
+    "MixinAbstractClientPlayer",
+    "MixinGuiPlayerTabOverlay"
+  ]
+}
