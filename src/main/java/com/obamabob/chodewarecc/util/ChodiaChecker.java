@@ -11,7 +11,7 @@ public class ChodiaChecker {
     List<String> thing = new ArrayList<>();
     public ChodiaChecker(){
         try {
-            URL pastebin = new URL("https://pastebin.com/raw/irGZgpdn");
+            URL pastebin = new URL("https://github.com/7OU/chodiaware-names/blob/master/names.txt");
             BufferedReader in = new BufferedReader(new InputStreamReader(pastebin.openStream()));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
