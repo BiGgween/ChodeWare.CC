@@ -7,20 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class CapeUtils {
-    List<UUID> uuids = new ArrayList<>();
-    public CapeUtils(){
+public class ChodiaChecker {
+    List<String> thing = new ArrayList<>();
+    public ChodiaChecker(){
         try {
-            URL pastebin = new URL("https://pastebin.com/raw/NQcbxusx");
+            URL pastebin = new URL("https://pastebin.com/raw/irGZgpdn");
             BufferedReader in = new BufferedReader(new InputStreamReader(pastebin.openStream()));
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                uuids.add(UUID.fromString(inputLine));
+                thing.add(inputLine);
             }
         } catch(Exception e){}
     }
 
-    public boolean hasCape(UUID id){
-        return uuids.contains(id);
+    public boolean isChodia(String e){
+        return thing.contains(e);
     }
 }

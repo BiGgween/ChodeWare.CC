@@ -22,7 +22,7 @@ public class MixinGuiPlayerTabOverlay {
 
     public String getPlayerName(NetworkPlayerInfo networkPlayerInfoIn) {
         String dname = networkPlayerInfoIn.getDisplayName() != null ? networkPlayerInfoIn.getDisplayName().getFormattedText() : ScorePlayerTeam.formatPlayerName(networkPlayerInfoIn.getPlayerTeam(), networkPlayerInfoIn.getGameProfile().getName());
-        if (Bruh.getInstance().nameUtils.isChodia(dname) && ModConfig.tabNames) return TextFormatting.RED + dname;
+        if (Bruh.getInstance().chodiaChecker.isChodia(dname) && ModConfig.tabNames) return TextFormatting.RED + dname;
         else return dname;
     }
 

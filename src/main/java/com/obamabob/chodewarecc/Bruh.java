@@ -1,9 +1,6 @@
 package com.obamabob.chodewarecc;
 
-import com.obamabob.chodewarecc.util.CapeUtils;
-import com.obamabob.chodewarecc.util.NameUtils;
-import me.zero.alpine.EventBus;
-import me.zero.alpine.EventManager;
+import com.obamabob.chodewarecc.util.ChodiaChecker;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 
@@ -11,10 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 public class Bruh {
     public static final String MODID = "chodewarecc";
 
-    public CapeUtils capeUtils;
-    public NameUtils nameUtils;
-
-    public static final EventBus EVENT_BUS = new EventManager();
+    public ChodiaChecker chodiaChecker;
 
     @Mod.Instance
     private static Bruh INSTANCE;
@@ -25,8 +19,7 @@ public class Bruh {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-        capeUtils = new CapeUtils();
-        nameUtils = new NameUtils();
+        chodiaChecker = new ChodiaChecker();
     }
 
     public static Bruh getInstance(){

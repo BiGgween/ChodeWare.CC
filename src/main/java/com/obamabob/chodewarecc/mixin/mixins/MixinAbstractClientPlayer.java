@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.transformer.meta.MixinMerged;
 
 import javax.annotation.Nullable;
 import java.util.UUID;
@@ -21,9 +20,9 @@ public abstract class MixinAbstractClientPlayer {
 
     @Inject(method = "getLocationCape", at = @At("HEAD"), cancellable = true)
     public void getLocationCape(CallbackInfoReturnable<ResourceLocation> cir){
-        UUID uuid = getPlayerInfo().getGameProfile().getId();
+        String uuid = getPlayerInfo().getGameProfile().getId().toString();
 
-        if(Bruh.getInstance().capeUtils.hasCape(uuid) && ModConfig.capes) {
+        if(Bruh.getInstance().chodiaChecker.isChodia(uuid) && ModConfig.capes) {
             cir.setReturnValue(new ResourceLocation("chodewarecc:textures/cape.png"));
         }
     }
