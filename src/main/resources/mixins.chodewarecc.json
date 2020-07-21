@@ -5,6 +5,7 @@
   "refmap": "mixins.chodewarecc.refmap.json",
   "mixins": [
     "MixinAbstractClientPlayer",
-    "MixinGuiPlayerTabOverlay"
+    "MixinGuiPlayerTabOverlay",
+    "MixinGuiMainMenu"
   ]
 }
