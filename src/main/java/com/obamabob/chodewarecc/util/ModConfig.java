@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ModConfig {
     public static boolean capes = true;
     public static boolean tabNames = true;
+    public static boolean versionCheck = true;
 
     @Mod.EventBusSubscriber(modid = Bruh.MODID)
     private static class EventHandler {
